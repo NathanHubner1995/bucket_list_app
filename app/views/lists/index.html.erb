@@ -1,2 +1,10 @@
 <h1 style="text-align:center; padding-top:30px;">Bucket List</h1>
 <hr />
+
+<h1>What do you want to do?</h1>
+<%= link_to 'Create Bucket List', new_list_path %>
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list %></li>
+  <% end %>
+</ul>
